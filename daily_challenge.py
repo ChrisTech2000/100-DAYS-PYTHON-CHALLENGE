@@ -16,9 +16,10 @@
 #Building a Tip Calculator
 print("Welcome to the tip calculator")
 totalBill = float((input("What was the total bill? $")))
-tip = float(input("How much tip would you like to give? 10, 12,or 15? $"))
+tip = float(input("How much tip would you like to give? 10, 12,or 15? $")) /100
+tipToPay = totalBill * tip
 people = float(input("How many people are there to share the bill? "))
-eachPerson = (totalBill + tip) / people
+eachPerson = (totalBill + tipToPay) / people
 
 print(f"Each person should pay: ${round(eachPerson, 2)}")
 
