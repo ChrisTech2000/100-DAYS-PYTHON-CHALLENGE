@@ -126,32 +126,69 @@ random_number = random.randint(0, 4)
 
 #Rock Paper Scissors Project
 
-choices = ["Rock", "Paper", "Scissor"]
-print("--Welcome to Rock Paper Scissor Game--")
-user_input = input("Select 0 for Rock, 1 for Paper, 2 for Scissor: ").strip()
+# choices = ["Rock", "Paper", "Scissor"]
+# print("--Welcome to Rock Paper Scissor Game--")
+# user_input = input("Select 0 for Rock, 1 for Paper, 2 for Scissor: ").strip()
+#
+# if user_input not in ("0", "1", "2"):
+#     print("Invalid input. Put either 0 for Rock, 1 for Paper, 2 for Scissor.")
+#
+# else:
+#     user_index = int(user_input)
+#     user_choices = choices[user_index]
+#
+#
+#     computer_choice = random.choice(choices)
+#     print(f"\nYou chose: {user_choices.capitalize()}")
+#     print(f"Computer chose: {computer_choice.capitalize()}")
+#
+#     if user_choices == computer_choice:
+#         print("It's a tie!")
+#     elif user_choices == "Rock" and computer_choice == "Scissor":
+#         print("You win!, Rock breaks scissor")
+#     elif user_choices == "Paper" and computer_choice == "Rock":
+#         print("You win!, Paper covers rock")
+#     elif user_choices == "Scissor" and computer_choice == "Paper":
+#         print("You win!, Scissor cut paper")
+#     else:
+#         print("You lose, the computer wins this time")
 
-if user_input not in ("0", "1", "2"):
-    print("Invalid input. Put either 0 for Rock, 1 for Paper, 2 for Scissor.")
-
-else:
-    user_index = int(user_input)
-    user_choices = choices[user_index]
+# sum_of_number = 0
+# for number in range(1, 101):
+#     sum_of_number += number
+# print(sum_of_number)
 
 
-    computer_choice = random.choice(choices)
-    print(f"\nYou chose: {user_choices.capitalize()}")
-    print(f"Computer chose: {computer_choice.capitalize()}")
+# for number in range(1, 101):
+#     if number % 3 == 0 and number % 5==0:
+#         print("FizzBuzz")
+#     elif number % 3 == 0:
+#         print("Fizz")
+#     elif number % 5 == 0:
+#         print ("Buzz")
+#     else:
+#         print(number)
 
-    if user_choices == computer_choice:
-        print("It's a tie!")
-    elif user_choices == "Rock" and computer_choice == "Scissor":
-        print("You win!, Rock breaks scissor")
-    elif user_choices == "Paper" and computer_choice == "Rock":
-        print("You win!, Paper covers rock")
-    elif user_choices == "Scissor" and computer_choice == "Paper":
-        print("You win!, Scissor cut paper")
-    else:
-        print("You lose, the computer wins this time")
+#Password Generator
+letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+symbols = ["!", "#", "$", "%", "&", "(", ")", "*", "+"]
+
+print("Welcome to Password Generator")
+number_of_letters = int(input("How many letters do you want to include in your password?: "))
+number_of_symbols = int(input("How many symbols do you want to include in your password?: "))
+number_of_numbers = int(input("How many numbers do you want to include in your password?: "))
+
+password = ""
+for char in range(1, number_of_letters + 1):
+    password += random.choice(letters)
+    # print(password)
+for char2 in range(1, number_of_symbols + 1):
+        password += random.choice(symbols)
+        # print(password)
+for char3 in range(1, number_of_numbers + 1):
+        password += random.choice(numbers)
+print(password)
 
 
 
