@@ -31,7 +31,7 @@ if checkNumber % 2 == 0:
 else:
     print(f"{checkNumber} is an odd number.")
 
-"""
+
 
 
 pizzaAmount= 0
@@ -58,6 +58,33 @@ extraCheese =input("How many extra cheese do you want?: y/n ")
 if extraCheese == "y":
     pizzaAmount += 1
 print(f"Your total bill is ${round(pizzaAmount, 2)}")
+
+
+print("Welcome to Treasure Island \nYour mission is to find the treasure")
+leftOrRight = input("Which side do you want? (left, or right): ").upper()
+if leftOrRight == "left":
+    swimOrWait = input("Which one do you want? (swim or wait): ")
+    if swimOrWait == "wait":
+        whichDoorColor = input("Which door color do you want? (red, yellow or blue): ")
+        if whichDoorColor == "yellow":
+            print("You win! Congratulations")
+        else:
+            print("You loose! You lose")
+    else:
+        print("You can't do that, game over")
+else:
+    print("Gosh, game over")
+
+"""
+import random
+import script
+
+rand_number = random.randint(1, 100)
+
+print(rand_number)
+
+print(script.my_number)
+
 
 
 
