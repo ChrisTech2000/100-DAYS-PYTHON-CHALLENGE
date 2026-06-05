@@ -54,7 +54,7 @@ if pepperoni == "y":
     else:
         pizzaAmount += 3
 
-extraCheese =input("How many extra cheese do you want?: y/n ")
+extraCheese =input("How much extra cheese do you want?: y/n ")
 if extraCheese == "y":
     pizzaAmount += 1
 print(f"Your total bill is ${round(pizzaAmount, 2)}")
@@ -75,16 +75,83 @@ if leftOrRight == "left":
 else:
     print("Gosh, game over")
 
+
+
+#import script
+
+#rand_number = random.randint(1, 100)
+
+#print(rand_number)
+
+#print(script.my_number)
+
+random_number = random.randint(0, 1)
+if random_number == 0:
+    print("Tail")
+else:
+    print("Head")
+
 """
+
+
 import random
-import script
 
-rand_number = random.randint(1, 100)
+list_of_friends = ["Sam", "Mikee", "Max", "Dozie", "Chris"]
+random_number = random.randint(0, 4)
+# if random_number == 0:
+#     print(list_of_friends[0])
+# elif random_number == 1:
+#     print(list_of_friends[1])
+# elif random_number == 2:
+#     print(list_of_friends[2])
+# elif random_number == 3:
+#     print(list_of_friends[3])
+# else:
+#     print(list_of_friends[4])
 
-print(rand_number)
+# print(list_of_friends[random_number])
+#
+# fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+# fruits[-1] = "Melons"
+# fruits.append("Lemons")
+# print(fruits)
+#
+# fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+# vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+#
+# dirty_dozen = [fruits, vegetables]
+#
+# print(dirty_dozen[0][0])
 
-print(script.my_number)
 
+#Rock Paper Scissors Project
+
+choices = ["Rock", "Paper", "Scissor"]
+print("--Welcome to Rock Paper Scissor Game--")
+user_input = input("Select 0 for Rock, 1 for Paper, 2 for Scissor: ").strip()
+
+if user_input not in ("0", "1", "2"):
+    print("Invalid input. Put either 0 for Rock, 1 for Paper, 2 for Scissor.")
+
+else:
+    user_index = int(user_input)
+    user_choices = choices[user_index]
+
+
+    computer_choice = random.choice(choices)
+    print(f"\nYou chose: {user_choices.capitalize()}")
+    print(f"Computer chose: {computer_choice.capitalize()}")
+
+    if user_choices == computer_choice:
+        print("It's a tie!")
+    elif user_choices == "Rock" and computer_choice == "Scissor":
+        print("You win!, Rock breaks scissor")
+    elif user_choices == "Paper" and computer_choice == "Rock":
+        print("You win!, Paper covers rock")
+    elif user_choices == "Scissor" and computer_choice == "Paper":
+        print("You win!, Scissor cut paper")
+    else:
+        print("You lose, the computer wins this time")
 
 
 
