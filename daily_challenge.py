@@ -96,8 +96,8 @@ else:
 
 import random
 
-list_of_friends = ["Sam", "Mikee", "Max", "Dozie", "Chris"]
-random_number = random.randint(0, 4)
+# list_of_friends = ["Sam", "Mikee", "Max", "Dozie", "Chris"]
+# random_number = random.randint(0, 4)
 # if random_number == 0:
 #     print(list_of_friends[0])
 # elif random_number == 1:
@@ -179,15 +179,31 @@ number_of_letters = int(input("How many letters do you want to include in your p
 number_of_symbols = int(input("How many symbols do you want to include in your password?: "))
 number_of_numbers = int(input("How many numbers do you want to include in your password?: "))
 
-password = ""
+# password = ""
+# for char in range(1, number_of_letters + 1):
+#     password += random.choice(letters)
+#     # print(password)
+# for char2 in range(1, number_of_symbols + 1):
+#         password += random.choice(symbols)
+#         # print(password)
+# for char3 in range(1, number_of_numbers + 1):
+#         password += random.choice(numbers)
+# print(password)
+
+#To be reshuffling it after generation so hackers cannot predict
+
+password_list = []
 for char in range(1, number_of_letters + 1):
-    password += random.choice(letters)
+    password_list.append(random.choice(letters))
     # print(password)
 for char2 in range(1, number_of_symbols + 1):
-        password += random.choice(symbols)
+        password_list.append(random.choice(symbols))
         # print(password)
 for char3 in range(1, number_of_numbers + 1):
-        password += random.choice(numbers)
+        password_list.append(random.choice(numbers))
+#You can then change the order of the password in the list using random.shuffle
+random.shuffle(password_list)
+password = "".join(password_list)
 print(password)
 
 
